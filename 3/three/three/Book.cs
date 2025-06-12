@@ -8,13 +8,13 @@ namespace three
 {
     public class Book
     {
-        private string bookName;
-        private string authorName;
-        private string publisherName;
-        private int yearPublished;
-        private int numberOfPages;
+        private string bookName; // название книги
+        private string authorName; // имя автора
+        private string publisherName; // имя издателя
+        private int yearPublished; // год публикации
+        private int numberOfPages; // количество страниц
 
-        public Book()
+        public Book() // конструктор по умолчанию
         {
             bookName = "Unknown";
             authorName = "Unknown";
@@ -24,7 +24,7 @@ namespace three
         }
 
         public Book(string inBookName, string inAuthorName, string inPublisherName, int inYearPublished, int inNumberOfPages)
-        {
+        {  // конструктор с параметрами
             bookName = inBookName;
             authorName = inAuthorName;
             publisherName = inPublisherName;
@@ -42,11 +42,11 @@ namespace three
             return authorName;
         }
 
-        public string printBookInfo()
+        public void printBookInfo()
         {
-            return "Book name:" + bookName + " , " + "Author name:" + authorName + " , " +
-                   "Publisher name:" + publisherName + " , " + "Year published:" + yearPublished + " , " +
-                   "Number of pages:" + numberOfPages;
+            Console.WriteLine("--Book name: " + bookName + '\n' + "  Author name: " + authorName + "\n" +
+                   "  Publisher name: " + publisherName + '\n' + "  Year published: " + yearPublished + '\n' +
+                   "  Number of pages: " + numberOfPages);
         }
     }
 }

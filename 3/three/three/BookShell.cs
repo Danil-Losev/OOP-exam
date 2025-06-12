@@ -21,7 +21,7 @@ namespace three
         public BookShell(string inShellName, List<Book> inBookShell)
         {
             shellName = inShellName;
-            bookShell = inBookShell;
+            bookShell = new List<Book>(inBookShell);
         }
 
 
